@@ -1,19 +1,26 @@
 import './App.css';
+import React from "react";
+import { Route, Switch } from "react-router-dom";
+import Home from "./Home";
+import About from "./About";
+import Contact from "./Contact";
+import NavBar from "./NavBar";
 
 function App() {
   return (
-    <div className="App">
-      <nav>
-      <a href="/Home" onClick={navigate}>
-        Home
-      </a>
-      <a href="/about" onClick={navigate}>
-        About
-      </a>
-      <a href="/contact" onClick={navigate}>
-        Contact
-      </a>
-    </nav>
+    <div>
+      <NavBar />
+      <Switch>
+        <Route exact path="/about">
+          <About />
+        </Route>
+        <Route exact path="/contact">
+          <Contact />
+        </Route>
+        <Route exact path="/">
+          <Home />
+        </Route>
+      </Switch>
     </div>
   );
 }
