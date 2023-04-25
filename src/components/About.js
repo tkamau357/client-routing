@@ -1,6 +1,6 @@
 import React from "react";
 
-function about(){
+function About(){
     return(
         <div className="aboutnav">
             <h5> ABOUT US</h5>
@@ -8,4 +8,4 @@ function about(){
         </div>
     )
 }
-export default about;
+export default About;
